@@ -4,7 +4,7 @@ y llame a alguno de sus métodos para asegurarse que la importación funcionó."
 
 """from TP_N7 import Restaurante
 
-restaurante1= Restaurante("Mc Donal's", "comida rapida")
+restaurante1= Restaurante("McDonald's", "comida rapida")
 restaurante1.describir_restaurante()
 restaurante1.abrir_restaurante()"""
 
