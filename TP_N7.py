@@ -142,11 +142,11 @@ class Heladeria(Restaurante):
         for sabor in self.sabores:
             print(sabor)
 
-
-heladeria= Heladeria("Elio", "Helados", ["Futilla", "Dulce de Leche", "Cielo"])
-heladeria.describir_restaurante()
-heladeria.abrir_restaurante()
-heladeria.mostrar_sabores()"""
+if __name__=='__main__':
+    heladeria= Heladeria("Elio", "Helados", ["Futilla", "Dulce de Leche", "Cielo"])
+    heladeria.describir_restaurante()
+    heladeria.abrir_restaurante()
+    heladeria.mostrar_sabores()"""
 
 
 """5) Escribir una clase Personaje que contenga los atributos vida, posicion y velocidad, 
@@ -301,10 +301,6 @@ Admin y use el método para mostrar privilegios."""
     def saludar_usuario(self):
         print(f"---Bienvenido al Sistema {self.nombre}---")
 
-class Admin(Usuario):
-    def __init__(self, nombre, apellido, edad, email, privilegios_lista):
-        super().__init__(nombre, apellido, edad, email)
-        self.privilegios=Privilegios(privilegios_lista)
 
 privilegios_lista= ["Puede postear en el foro", "Puede borrar un post", "Puede banear usuario"]
 
@@ -315,6 +311,12 @@ class Privilegios():
         print(f"Privilegios del administrador:")
         for privilegio in self.privilegios:
             print(f"_ {privilegio}")
+
+            
+class Admin(Usuario):
+    def __init__(self, nombre, apellido, edad, email, privilegios_lista):
+        super().__init__(nombre, apellido, edad, email)
+        self.privilegios=Privilegios(privilegios_lista)
 
 admin2=Admin("Juan", "Perez", 18, "juanitoP23@gmail.com", privilegios_lista)
 admin2.privilegios.mostrar_privilegio()"""
